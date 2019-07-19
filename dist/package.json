@@ -2,6 +2,7 @@
   "name": "share-doc",
   "version": "1.0.0",
   "main": "server/index.js",
+  "description": "api doc for swagger json and open api 2.0",
   "dependencies": {
     "@types/koa": "^2.0.49",
     "@types/koa-router": "^7.0.42",
