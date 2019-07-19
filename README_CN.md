@@ -9,8 +9,8 @@
 1. 下载 npm 包
 
 ```
-npm install share-api
-yarn add share-api
+npm i @shuangren/share-api
+yarn add @shuangren/share-api
 ```
 
 2. 新建 js 文件并引入

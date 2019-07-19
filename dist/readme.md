@@ -14,7 +14,6 @@
 npm i @shuangren/share-api
 yarn add @shuangren/share-api
 ```
-```
 
 2. create new js file and import
 
