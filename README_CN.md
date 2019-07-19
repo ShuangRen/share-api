@@ -17,7 +17,7 @@ yarn add @shuangren/share-api
 
 ```
 // index.js
-const ApiDoc = require('share-doc');
+const ApiDoc = require('@shuangren/share-api');
 const doc = new ApiDoc();
 doc.start();
 ```
@@ -54,7 +54,7 @@ node dist/server/start.js
 
 ```
 // index.js
-const ApiDoc = require('share-doc');
+const ApiDoc = require('@shuangren/share-api');
 const doc = new ApiDoc();
 doc.config({
   port: '3001',
