@@ -80,7 +80,6 @@ Directly modify the configuration in the file `dist/server/config`
 `port` start port  Default is `8081`
 
 `ipList` An ip list that runs direct internal access, Default is `[]`
-``
 
 ## Full configuration reference
 
