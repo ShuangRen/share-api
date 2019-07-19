@@ -1,0 +1,80 @@
+.layout-header-wrapper {
+  background: '#fff';
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  
+  .header-input-group {
+    display: flex;
+    flex:1;
+    .input-group {
+      display: flex;
+      position: relative;
+      .search-input {
+        width:400px;
+      }
+
+      .search-list-wrapper {
+        width:100%;
+        position: absolute;
+        top:32px;
+        left:0;
+        background: #fff;
+        //padding:0 15px;
+        z-index: 1;
+        box-shadow: 0 5px 10px #eee;
+        .ant-list-item-content, .ant-list-item-meta {
+          padding: 0 15px;
+        }
+        .ant-list-item-meta {
+          align-items: center;
+        }
+
+        .method-tag {
+          width: 48px;
+          height: 24px;
+          color: #333;
+          font-size: 12px;
+          border-radius: 4px;
+          text-align: center;
+          line-height: 24px;
+          color:#fff;
+        }
+
+        .isActivity {
+          background:#e6f7ff;
+        }
+  
+        .get {
+          .method-tag {
+            background: #61affe;
+          }
+        }
+        .post {
+          .method-tag {
+            background: #49cc90;
+          }
+        }
+        .put {
+          .method-tag {
+            background: #fca130;
+          }
+        }
+        .delete  {
+          .method-tag {
+            background: #f93e3e;
+          }
+        }
+        .head  {
+          .method-tag {
+            background: #9012fe;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    padding-right:20px;
+  }
+}

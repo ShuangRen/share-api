@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>服务器开小差了</title>
+  <style>
+    * {
+      padding:0;
+      margin:0;
+    }
+
+    header {
+      height:44px;
+      text-align: center;
+      border-bottom:1px solid #f1f1f1;
+    }
+
+    header h1 {
+      font-size:17px;
+      color:#222;
+      line-height: 44px;
+    }
+
+    img {
+      width:160px;
+      margin: 88px auto 60px;
+      display: block;
+    }
+
+    .info {
+      font-size:14px;
+      color:#333;
+      text-align: center;
+    }
+  </style>
+  <script>
+    var getQueryString = (name) => {
+      const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+      const r = window.location.search.substr(1).match(reg);
+      if (r != null) {
+        return unescape(r[2]);
+      }
+      return null;
+    }
+    window.onload = function() {
+      document.querySelector('#aaa').href = decodeURIComponent(getQueryString('url')) + '?code=' + getQueryString('code');
+    document.querySelector('#txt').innerHTML = getQueryString('code');
+    }
+  </script>
+</head>
+<body>
+  <div class="not-found">
+    <header>
+      <h1>服务器开小差了</h1>
+    </header>
+    <div className="body">
+      <div class="txt" id="txt" style="font-size:30px"></div>
+     <a href="" id="aaa"><button>点我跳转</button></a> 
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.list-container {
+  overflow: hidden;
+  display: flex;
+  .flex:nth-of-type(2) {
+    border-left: 1px solid #eee;
+  }
+  .left {
+    flex:2;
+    min-width:400px;
+
+    h1, h2 {
+      line-height: 30px;
+      font-size:22px;
+    }
+
+    h2 {
+      line-height: 40px;
+      color:#666;
+      font-weight: 400;
+      margin-bottom:20px;
+      font-size:18px;
+    }
+
+    .list-box {
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      .method-tag {
+        width: 48px;
+        height: 48px;
+        color: #333;
+        font-size: 12px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 48px;
+        color:#fff;
+      }
+      &.deprecated {
+        .method-tag {
+          background:#dcdcdc !important;
+          text-decoration: line-through;
+        }
+        h4 a {
+          color:#dcdcdc !important;
+          text-decoration: line-through;
+        }
+        .ant-list-item-meta-description {
+          color:#dcdcdc !important;
+          text-decoration: line-through;
+        }
+      }
+
+      &.get {
+        .method-tag {
+          background: #61affe;
+        }
+      }
+      &.post {
+        .method-tag {
+          background: #49cc90;
+        }
+      }
+      &.put {
+        .method-tag {
+          background: #fca130;
+        }
+      }
+      &.delete  {
+        .method-tag {
+          background: #f93e3e;
+        }
+      }
+      &.head  {
+        .method-tag {
+          background: #9012fe;
+        }
+      }
+    }
+  }
+
+  .right-wrapper {
+    max-height:780px;
+    flex:3;
+    overflow: auto;
+    &::-webkit-scrollbar {/*滚动条整体样式*/
+      display: none;
+    }
+  }
+}

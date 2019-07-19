@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist/server",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom",
+      "es2017"
+    ],
+    "allowJs": true,
+    "moduleResolution": "node",
+    "rootDir": "server",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "downlevelIteration": true,
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "*": [
+        "*"
+      ]
+    },
+  },
+  "exclude": [
+    "src",
+    "dist",
+    "node_modules",
+    "build",
+    "config",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "shipitfile.js",
+    "ecosystem.config.js"
+  ]
+}

@@ -1,0 +1,133 @@
+img {
+	border: none;
+	vertical-align: top
+}
+
+dd,dl,dt,h1,h2,h3,h4,li,ol,ul {
+	margin: 0
+}
+
+li,ol,ul {
+	padding: 0;
+	list-style: none
+}
+
+a,button {
+	color: #000;
+	text-decoration: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+a,button,div,label,span {
+	-webkit-tap-highlight-color: transparent
+}
+
+body,input,textarea {
+	font-size: 13px;
+	font-family: "PingFang SC", "Hiragino Sans GB",  "Microsoft YaHei",  Helvetica,  Arial, "Heiti SC", sans-serif;
+	-webkit-font-smoothing: antialiased
+}
+
+input,textarea {
+	outline: 0;
+	color: #8c8fa4;
+	-webkit-box-sizing: border-box
+}
+html {
+	height:100%;
+}
+html,body {
+	margin: 0 auto;
+	min-width: 1000px;
+	// height: 100%;
+	background: #f5f5f5;
+	color: #8c8fa4;
+	min-height: 100%;
+
+}
+
+body {
+  font-size: 14px;
+  line-height: 18px;
+  color:#333;
+}
+.main-continar {
+	height:100%;
+}
+.wrap {
+	height:100%;
+}
+
+p {
+	margin:0;
+}
+
+h1,h2,h3,h4,h5,h6,strong {font-weight: bold}
+
+
+#__vconsole .vc-item-content span:nth-of-type(1), #__vconsole .vc-item-content span:nth-of-type(2) {
+	color:#03A9F4;
+}
+
+
+.clearfix(){
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+
+//处理未满一屏幕
+
+#root-container, #root-wrap {
+	min-height:100%;
+	height:100%;
+	min-width: 1210px;
+}
+
+#root-wrap {
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+#body {
+	min-height:100%;
+	margin-bottom:-68px;
+	margin-top:-62px;
+	padding-top:62px;
+	padding-bottom:68px;
+	box-sizing: border-box;
+}
+
+//ie9 hack
+.ie9-infos {
+	height:45px;
+	width:100%;
+	//position: fixed;
+	//left:0;
+	background: #FEECBF;
+	color:#FE4518;
+	text-align: center;
+	line-height: 45px;
+	font-size:16px;
+}
+
+a {
+	color:#1890ff;
+}
+
+
+//全局
+.ant-select-enabled.placeholder {
+	.ant-select-selection__placeholder {
+		display: block !important;
+	}
+}

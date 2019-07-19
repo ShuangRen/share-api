@@ -1,0 +1,64 @@
+.layout-sider {
+  overflow: hidden;
+  background: #fff !important;
+  min-width:249px !important;
+  max-width:249px !important;
+  width:249px !important;
+  flex: 0 0 249px !important;
+
+  .search-wrapper {
+    padding:0 10px;
+  }
+
+  .nav-api-list {
+    overflow: hidden;
+    padding:10px 0;
+    position: absolute;
+    top:96px;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    box-sizing: border-box;
+
+    .dl {
+      overflow: auto;
+      height:100%;
+      .ant-menu {
+        height:100%;
+      }
+      &::-webkit-scrollbar {/*滚动条整体样式*/
+        display: none;
+      }
+    }
+  }
+}
+.layout-nav-logo {
+  height: 32px;
+  margin: 16px 18px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  img{
+    height: 70%;
+  }
+  span {
+    font-size:20px;
+    color:#333;
+    display: inline-block;
+    margin-left:10px;
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  &.collapsed {
+    margin:16px 29px;
+    span {
+     // display: none;
+      opacity: 0;
+      white-space: nowrap;
+    }
+  }
+}
+
