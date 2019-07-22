@@ -1,7 +1,7 @@
 "use strict";
 var app_1 = require("./app");
 var conf = require("./config");
-module.exports = /** @class */ (function () {
+var ApiDoc = /** @class */ (function () {
     function ApiDoc() {
     }
     ApiDoc.prototype.config = function (opts) {
@@ -14,3 +14,4 @@ module.exports = /** @class */ (function () {
     };
     return ApiDoc;
 }());
+module.exports = ApiDoc;
