@@ -30,8 +30,11 @@ exports.default = (function (ctx, next) {
         return;
     }
     var data = JSON.parse(dataBuffer.toString());
+    if (!data || data.length === 0) {
+        data = conf.demo;
+    }
     // 如果是外网，并且没有输入 password 的 筛选出允许外部访问的api
-    if (conf.ipList.length > 0 && !conf.ipList.includes(clientIP) && ctx.query.password !== conf.password) {
+    if (!conf.ipList.includes(clientIP) && ctx.query.password !== conf.password) {
         data = data.filter(function (v) { return v.isOpen; });
         canOpen = false;
     }
