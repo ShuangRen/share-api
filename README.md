@@ -2,25 +2,24 @@
 
 [查看中文README](/README_CN.md)
 
-For Swagger, Swagger open api 3.0 specification, API documentation by configuring Swagger JSON.
+## Introduction
 
-More friendly interface
+Based on Swagger and Swagger Open API 3.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
 
-More intuitive display
+## Features
 
-Support for enum display
-
-Support for public, private, different displays
-
-Support for configuring private API documentation ip access whitelist
-
-Support privatization
+- More friendly UI
+- More intuitive display
+- Support for `enum` display
+- Support for both public and private displays
+- Support for configuring IP access whitelist for private API documentation 
+- Support for privatization deployment
 
 ![预览](./img.gif)
 
-## Installation
+## Quick Start
 
-> Provide 2 ways to start
+> Providing 2 ways to start
 
 #### 1. Install from npm
 
@@ -48,7 +47,7 @@ node index.js
 
 #### Install from Git
 
-1. Clone  repository
+1. Clone repository
 
 ```
 git clone https://github.com/ShuangRen/share-api.git
@@ -89,15 +88,15 @@ Directly modify the configuration in the file `dist/server/config`
 
 ## Configuration instructions
 
-`dataPath`  Cache interface configuration list data file, Default in `dist/server` 
+`dataPath`  data file that caches interface configuration list , Default `dist/server` 
 
-`password` Switch to password for internal access, Default is `123456`
+`password` password when switched to internal access mode, Default is `123456`
 
 `port` start port  Default is `8081`
 
-`ipList` An ip list that runs direct internal access, Default is `[]`
+`ipList` An IP list that runs direct internal access, Default is `[]`
 
-## Full configuration reference
+## Whole configuration reference
 
 ```
 doc.config({
