@@ -1,12 +1,28 @@
 # Share API
 
-[点击此处查看中文README](/README_CN.md)
+[查看中文README](/README_CN.md)
+
+For Swagger, Swagger open api 3.0 specification, API documentation by configuring Swagger JSON.
+
+More friendly interface
+
+More intuitive display
+
+Support for enum display
+
+Support for public, private, different displays
+
+Support for configuring private API documentation ip access whitelist
+
+Support privatization
+
+![预览](./img.gif)
 
 ## Installation
 
-## Provide 2 ways to start
+> Provide 2 ways to start
 
-### 1. Install from npm
+#### 1. Install from npm
 
 1. Download npm Package
 
@@ -15,7 +31,7 @@ npm i @shuangren/share-api
 yarn add @shuangren/share-api
 ```
 
-2. create new js file and import
+2. Create new js file and import
 
 ```
 // index.js
@@ -24,27 +40,27 @@ const doc = new ApiDoc();
 doc.start();
 ```
 
-3. startup
+3. Startup
 
 ```
 node index.js
 ```
 
-### Install from Git
+#### Install from Git
 
-1. clone  repository
+1. Clone  repository
 
 ```
 git clone https://github.com/ShuangRen/share-api.git
 ```
-2. install dependencies
+2. Install dependencies
 
 ```
 npm install
 yarn
 ```
 
-3. startup
+3. Startup
 
 ```
 node dist/server/start.js
@@ -52,7 +68,7 @@ node dist/server/start.js
 
 ## Extended configuration
 
-1. Install from npm
+#### Install from npm
 
 ```
 // index.js
@@ -66,7 +82,7 @@ doc.config({
 doc.start();
 ```
 
-2. Install from Git 
+#### Install from Git 
 
 Directly modify the configuration in the file `dist/server/config` 
 

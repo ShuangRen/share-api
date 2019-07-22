@@ -1,10 +1,26 @@
 # Share API
 
+基于Swagger，Swagger open api 3.0 规范，通过配置Swagger JSON 生成API 文档。
+
+更友好的界面
+
+更直观的展示
+
+支持 enum的展示
+
+支持公开，私有 不同的展示
+
+支持配置私有API文档 ip访问白名单
+
+支持私有化搭建
+
+![预览](./img.gif)
+
 ## 快速开始
 
-## 提供2种方式启动
+> 提供2种方式启动
 
-### 1. 从 npm 安装
+#### 从 npm 安装
 
 1. 下载 npm 包
 
@@ -28,7 +44,7 @@ doc.start();
 node index.js
 ```
 
-### 从 git 安装
+#### 从 git 安装
 
 1. clone 仓库
 
@@ -50,7 +66,7 @@ node dist/server/start.js
 
 ## 扩展配置
 
-1. npm 安装
+#### npm 安装
 
 ```
 // index.js
@@ -64,14 +80,13 @@ doc.config({
 doc.start();
 ```
 
-2. git clone 安装
+#### git clone 安装
 
 直接修改 `dist/server/config` 文件里的配置
 
-
 ## 配置说明
 
-`dataPath`  缓存接口配置列表的数据文件， 默认在`dist/server` 目录下
+`dataPath`  缓存接口配置列表的数据文件， 默认在 `dist/server` 目录下
 
 `password` 切换到内部访问时的密码，默认 `123456`
 
@@ -80,7 +95,7 @@ doc.start();
 `ipList` 运行直接内部访问的ip 列表，默认 `[]`
 ``
 
-### 全量配置参考
+## 全量配置参考
 
 ```
 doc.config({
