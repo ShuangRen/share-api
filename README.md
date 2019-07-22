@@ -1,5 +1,11 @@
 # Share API
 
+![version](https://img.shields.io/npm/v/@shuangren/share-api.svg)
+![license](https://img.shields.io/github/license/ShuangRen/share-api.svg)
+![language](https://img.shields.io/github/languages/top/ShuangRen/share-api.svg)
+![download](https://img.shields.io/npm/dw/@shuangren/share-api.svg)
+![pr](https://img.shields.io/github/issues-pr-closed/ShuangRen/share-api.svg)
+
 [查看中文README](/README_CN.md)
 
 ## Introduction

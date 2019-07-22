@@ -1,5 +1,11 @@
 # Share API
 
+![version](https://img.shields.io/npm/v/@shuangren/share-api.svg)
+![license](https://img.shields.io/github/license/ShuangRen/share-api.svg)
+![language](https://img.shields.io/github/languages/top/ShuangRen/share-api.svg)
+![download](https://img.shields.io/npm/dw/@shuangren/share-api.svg)
+![pr](https://img.shields.io/github/issues-pr-closed/ShuangRen/share-api.svg)
+
 ## 介绍
 
 基于Swagger，Swagger open api 3.0 规范，通过配置Swagger JSON 生成API 文档。
