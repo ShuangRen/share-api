@@ -10,6 +10,8 @@
 
 For Swagger, Swagger open api 3.0 specification, API documentation by configuring Swagger JSON.
 
+[View Change Logs](/changelog.md)
+
 More friendly interface
 
 More intuitive display

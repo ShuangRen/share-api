@@ -12,6 +12,8 @@
 
 Based on Swagger and Swagger Open API 3.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
 
+[View Change Logs](/changelog.md)
+
 ## Features
 
 - More friendly UI
