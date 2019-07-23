@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Based on Swagger and Swagger Open API 3.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
+Based on Swagger and Swagger Open API 2.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
 
 ## Features
 
