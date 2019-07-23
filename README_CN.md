@@ -8,7 +8,7 @@
 
 ## 介绍
 
-基于Swagger，Swagger open api 3.0 规范，通过配置Swagger JSON 生成API 文档。
+基于Swagger，Swagger open api 2.0 规范，通过配置Swagger JSON 生成API 文档。
 
 ## 功能与特性
 
