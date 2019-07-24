@@ -10,7 +10,7 @@
 
 基于Swagger，Swagger open api 2.0 规范，通过配置Swagger JSON 生成API 文档。
 
-[查看更新日志](/changelog.md)
+[查看更新日志](/changelog_cn.md)
 
 ## 功能与特性
 

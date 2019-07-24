@@ -155,7 +155,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://test.com",
+      "target": "http://localhost:8081",
       "ws": true,
       "secure": true,
       "changeOrigin": true,

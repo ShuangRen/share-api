@@ -10,28 +10,24 @@ export interface IUserInfo {
   observerId: number
 }
 
-export interface IcenterConfig {
+export interface ICenterConfig {
   title: string,
   name: string,
   url: string,
   isOpen: boolean,
 }
 
-export interface IswaggerApiConfigCurrent extends IcenterConfig {
-  index: number
-}
 
 export interface ICommonStore {
   collapsed: boolean,
   apiDataList: Iswagger[];
   currentTag: string,
-  currentCenterConfig: IcenterConfig | null
+  currentCenterConfig: ICenterConfig | null
   center: Iswagger | null,
   filterNav: Itag[],
   filterValue: string,
   detailItem: any, // todo
   swaggerApiConfig: any,
-  swaggerApiConfigCurrent: IswaggerApiConfigCurrent | null,
   canOpen: boolean,
   logout: () => Promise<boolean>,
   getSwaggerDatas: () => boolean,

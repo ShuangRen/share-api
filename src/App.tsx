@@ -7,6 +7,10 @@ import routes from './routers';
 import store from './store';
 import commonStore from "./store/common";
 
+let baseName: string | undefined;
+if (window['scopePath']) {
+  baseName = window['scopePath'];
+}
 
 // 获取用户信息
 commonStore.getSwaggerApiConfig();
@@ -22,7 +26,7 @@ const ObserverRender = observer(() => {
 export default () => {
   return (
     <Provider {...store}>
-      <BrowserRouter>
+      <BrowserRouter basename={baseName}>
         <Layout>
           <Switch>
             <ObserverRender />

@@ -1,13 +1,13 @@
 import { observable, action, autorun } from 'mobx';
 import * as Api from '@/api/common.api';
-import { ICommonStore, IcenterConfig, IswaggerApiConfigCurrent } from './interface/common.interface';
+import { ICommonStore, ICenterConfig } from './interface/common.interface';
 import { Iswagger, Itag } from '@/interface/swagger.interface';
 class Common implements ICommonStore {
   @observable public collapsed: boolean = false; // 展开收起
   @observable public apiDataList: Iswagger[] = []; // 所有swagger 数据 list
   @observable public center: Iswagger | null = null; // 当前的中心
   @observable public currentTag: string = ''; // 当前选中的 tag
-  @observable public currentCenterConfig: IcenterConfig | null = null; // 当前的 中心 配置文件
+  @observable public currentCenterConfig: ICenterConfig | null = null; // 当前的 中心 配置文件
   @observable public filterNav: Itag[] = []; // 筛选出来的  nav
   @observable public filterValue: string = ''; // 筛选出来的 string
   @observable public canOpen: boolean = false; // 是否开放权限
@@ -15,7 +15,6 @@ class Common implements ICommonStore {
   @observable public detailItem: any = null;
 
   @observable public swaggerApiConfig: any = [];
-  @observable public swaggerApiConfigCurrent: IswaggerApiConfigCurrent | null = null; // 添加修改等用于暂存
 
   constructor() {
     autorun(() => {

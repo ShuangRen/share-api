@@ -42,7 +42,10 @@ export default () => {
   })
 
   router.get('*', async (ctx: Koa.ParameterizedContext<any>, next: NextFunction) => {
-    const template = fs.readFileSync(__dirname + '/../build/index.html', { encoding: 'utf-8' });
+    let template = fs.readFileSync(__dirname + '/../build/index.html', { encoding: 'utf-8' });
+    if (conf.scopePath) {
+      template = template.replace(/(\<meta charset\=\"utf\-8\"\>)/, '<script>window.scopePath="' + conf.scopePath + '"</script>$1')
+    }
     ctx.body = template;
   })
 
