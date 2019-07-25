@@ -124,12 +124,12 @@ class Setting extends React.Component<IProps, IState> {
       if (this.state.currentIndex === -1) {
         return;
       }
-
+      const enablePrivate = this.props.common.enablePrivate;
       common.swaggerApiConfig[this.state.currentIndex] = {
         title: values.title,
         name: values.name,
         url: values.url,
-        isOpen: values.isOpen === ISOPEN.True ? true : false,
+        isOpen: !enablePrivate || values.isOpen === ISOPEN.True ? true : false,
       }
 
       const result = await common.updateSwaggerApiConfig();
@@ -226,19 +226,23 @@ class Setting extends React.Component<IProps, IState> {
                     )
                   }
                 </Form.Item>
-                <Form.Item
-                  label="允许外部访问" {...formItemLayout}>
-                  {
-                    getFieldDecorator('isOpen', {
-                      initialValue: ISOPEN.True
-                    })(
-                      <Select>
-                        <Select.Option value={ISOPEN.True}>允许</Select.Option>
-                        <Select.Option value={ISOPEN.False}>不允许</Select.Option>
-                      </Select>
-                    )
-                  }
-                </Form.Item>
+                {
+                  this.props.common.enablePrivate && (
+                    <Form.Item
+                      label="允许外部访问" {...formItemLayout}>
+                      {
+                        getFieldDecorator('isOpen', {
+                          initialValue: ISOPEN.True
+                        })(
+                          <Select>
+                            <Select.Option value={ISOPEN.True}>允许</Select.Option>
+                            <Select.Option value={ISOPEN.False}>不允许</Select.Option>
+                          </Select>
+                        )
+                      }
+                    </Form.Item>
+                  )
+                }
               </Form>
             </Modal>
           )

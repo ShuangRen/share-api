@@ -11,6 +11,7 @@ class Common implements ICommonStore {
   @observable public filterNav: Itag[] = []; // 筛选出来的  nav
   @observable public filterValue: string = ''; // 筛选出来的 string
   @observable public canOpen: boolean = false; // 是否开放权限
+  @observable public enablePrivate: boolean = false; // 是否全局开启私有配置功能
   // todo
   @observable public detailItem: any = null;
 
@@ -102,6 +103,7 @@ class Common implements ICommonStore {
       return false;
     }
     this.canOpen = result.canOpen || false;
+    this.enablePrivate = result.enablePrivate || false;
     this.swaggerApiConfig = result.data;
     this.getSwaggerDatas();
 

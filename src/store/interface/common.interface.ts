@@ -29,6 +29,7 @@ export interface ICommonStore {
   detailItem: any, // todo
   swaggerApiConfig: any,
   canOpen: boolean,
+  enablePrivate: boolean,
   logout: () => Promise<boolean>,
   getSwaggerDatas: () => boolean,
   requestSwagger: (item: any) => Promise<boolean>,

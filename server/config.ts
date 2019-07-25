@@ -8,6 +8,8 @@ export const scopePath: string = ''
 
 export const ipList: string[] = []
 
+export const enablePrivate: boolean = false;
+
 export const demo = [{
   isOpen: true,
   name: "demo",
