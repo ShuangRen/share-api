@@ -7,7 +7,7 @@
 * 有些场合下需要使用 `www.example.com/scopePath` 来访问，而不是直接通过域名 `www.example.com` 访问
 * 现在`scopePath` 是一个可配置的项 
 
-2. **重写了setting 相关代码，表单验证全部由 antd 接管**
+2. **重写了 `setting` 相关代码，表单验证全部由 antd 接管**
 
 3. **新增 `enablePrivate` 配置，默认关闭，开启后会启用私有接口和非私有接口的区分**
 
