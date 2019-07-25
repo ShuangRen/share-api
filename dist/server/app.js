@@ -93,6 +93,9 @@ exports.default = (function () {
         var template;
         return __generator(this, function (_a) {
             template = fs.readFileSync(__dirname + '/../build/index.html', { encoding: 'utf-8' });
+            if (conf.scopePath) {
+                template = template.replace(/(\<meta charset\=\"utf\-8\"\>)/, '<script>window.scopePath="' + conf.scopePath + '"</script>$1');
+            }
             ctx.body = template;
             return [2 /*return*/];
         });

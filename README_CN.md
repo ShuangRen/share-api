@@ -10,7 +10,22 @@
 
 基于Swagger，Swagger open api 2.0 规范，通过配置Swagger JSON 生成API 文档。
 
-[查看更新日志](/changelog.md)
+
+## 版本 1.1.0
+
+1. **支持二级路径**
+
+* 有些场合下需要使用 `www.example.com/scopePath` 来访问，而不是直接通过域名 `www.example.com` 访问
+* 现在`scopePath` 是一个可配置的项 
+
+2. **重写了setting 相关代码，表单验证全部由 antd 接管**
+
+3. **新增 `enablePrivate` 配置，默认关闭，开启后会启用私有接口和非私有接口的区分**
+
+* 通过开关开控制私有配置的开关，部分场景并不需要私有配置
+* 之前的设计导致使用过于复杂，在没有配置IP白名单的情况下，需要输入密码才能访问配置项
+
+[更多更新日志](/changelog_cn.md)
 
 ## 功能与特性
 
@@ -105,6 +120,11 @@ doc.start();
 `port` 启动端口，默认 `8081`
 
 `ipList` 运行直接内部访问的ip 列表，默认 `[]`
+
+`scopePath` 启用后，使用 `www.example.com/scopePath` 访问,  默认 `空字符串` 
+
+`enablePrivate` 开启私有配置功能, 默认 `false`
+
 ``
 
 ## 全量配置参考
@@ -117,6 +137,8 @@ doc.config({
   ipList:[
     '192.168.1.111',
     '21.221.1.111'
-  ]
+  ],
+  scopePath = 'abc',
+  enablePrivate = true
 });
 ```

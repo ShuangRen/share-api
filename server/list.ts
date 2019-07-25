@@ -8,45 +8,50 @@ import { IConfig } from './interface'
 export default (ctx: Koa.BaseContext, next: NextFunction) => {
   const clientIP = utils.getClientIP(ctx);
   let canOpen = true;
-  let dataBuffer: Buffer;
+  let dataBuffer: Buffer | null;
+  // rep
+  let data = null;
+  let msg = null;
   try {
     dataBuffer = fs.readFileSync(conf.dataPath);
   } catch (e) {
-
+    dataBuffer = null;
     try {
       fs.writeFileSync(conf.dataPath, JSON.stringify(conf.demo));
     } catch (e) {
-      ctx.body = {
-        code: 200,
-        data: false,
-        msg: e.message
-      }
-      return;
+      msg = e.message
     }
 
-    ctx.body = {
-      code: 200,
-      data: conf.demo,
-      canOpen: true
-    }
-    return;
+    data = conf.demo;
   }
-  let data = JSON.parse(dataBuffer.toString());
+
+  if (dataBuffer) {
+    data = JSON.parse(dataBuffer.toString());
+  }
   if (!data || data.length === 0) {
     data = conf.demo;
   }
-  // 如果是外网，并且没有输入 password 的 筛选出允许外部访问的api
-  if (!conf.ipList.includes(clientIP) && ctx.query.password !== conf.password) {
-    data = data.filter((v: IConfig) => v.isOpen);
-    canOpen = false;
+  // 是否开启了 private 私有化配置
+  if (conf.enablePrivate) {
+    // 如果是外网，并且没有输入 password 的 筛选出允许外部访问的api
+    if (!conf.ipList.includes(clientIP) && ctx.query.password !== conf.password) {
+      data = data.filter((v: IConfig) => v.isOpen);
+      canOpen = false;
+    }
   }
 
 
   ctx.set('Content-Type', 'application/json');
-  ctx.body = {
+  const body = {
     code: 200,
     data: data,
-    canOpen: canOpen
+    canOpen: canOpen,
+    enablePrivate: conf.enablePrivate
   }
+
+  if (msg) {
+    body['msg'] = msg;
+  }
+  ctx.body = body
 
 }

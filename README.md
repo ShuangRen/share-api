@@ -12,7 +12,22 @@
 
 Based on Swagger and Swagger Open API 2.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
 
-[View Change Logs](/changelog.md)
+
+## Version 1.1.0 ChangeLog
+
+1. **Support for secondary path**
+
+* In some cases, you need to use `www.example.com/scopePath` to access, instead of directly accessing the domain name `www.example.com`
+* Now `scopePath` is a configurable item
+
+2. **Rewritten the `setting` related code, the form validation is completely taken over by antd**
+
+3. **Added `enablePrivate` configuration, which is disabled by default. When enabled, it will enable the distinction between private and non-private interfaces.**
+
+* Some switches do not require private configuration by switching on and off the switch that controls the private configuration.
+* The previous design caused the use to be too complicated. If no IP whitelist is configured, you need to enter a password to access the configuration item.
+
+[More Change Logs](/changelog.md)
 
 ## Features
 
@@ -104,6 +119,10 @@ Directly modify the configuration in the file `dist/server/config`
 
 `ipList` An IP list that runs direct internal access, Default is `[]`
 
+`scopePath` After enabling, Access using  `www.example.com/scopePath`,  Default is `empty string` 
+
+`enablePrivate` enable private config, Default is `false`
+
 ## Whole configuration reference
 
 ```
@@ -114,6 +133,8 @@ doc.config({
   ipList:[
     '192.168.1.111',
     '21.221.1.111'
-  ]
+  ],
+  scopePath = 'abc',
+  enablePrivate = true
 });
 ```

@@ -1,6 +1,6 @@
 {
   "name": "share-api",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "private": true,
   "main": "dist/index.js",
   "dependencies": {
@@ -155,7 +155,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://test.com",
+      "target": "http://localhost:8081",
       "ws": true,
       "secure": true,
       "changeOrigin": true,

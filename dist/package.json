@@ -1,8 +1,8 @@
 {
   "name": "@shuangren/share-api",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "main": "server/index.js",
-  "description": "api doc for swagger json and open api 2.0",
+  "description": "api api-documentation swagger swagger-ui swagger-api openapi api-docs api-documentation-tool api-doc api-docs-generato",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShuangRen/share-api.git"

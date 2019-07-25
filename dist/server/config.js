@@ -3,7 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dataPath = '../data.config';
 exports.password = '123456';
 exports.port = '8081';
+exports.scopePath = '';
 exports.ipList = [];
+exports.enablePrivate = false;
 exports.demo = [{
         isOpen: true,
         name: "demo",
