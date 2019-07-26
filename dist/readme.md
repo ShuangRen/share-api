@@ -1,6 +1,8 @@
 # Share API
+![node](https://img.shields.io/node/v/egg)
+![platform](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1)
 
-![version](https://img.shields.io/npm/v/@shuangren/share-api.svg)
+![version](https://img.shields.io/github/package-json/v/ShuangRen/share-api)
 ![license](https://img.shields.io/github/license/ShuangRen/share-api.svg)
 ![language](https://img.shields.io/github/languages/top/ShuangRen/share-api.svg)
 ![download](https://img.shields.io/npm/dw/@shuangren/share-api.svg)
@@ -13,7 +15,20 @@
 Based on Swagger and Swagger Open API 2.0 Specification, a tool for generating API documentation by configuring Swagger JSON.
 
 
-## Version 1.1.0 ChangeLog
+## Features
+
+- More friendly UI
+- More intuitive display
+- Support for `enum` display
+- Support for both public and private displays
+- Support for configuring IP access whitelist for private API documentation 
+- Support for privatization deployment
+
+![预览](./img.gif)
+
+
+
+## Version 1.1.0
 
 1. **Support for secondary path**
 
@@ -28,17 +43,6 @@ Based on Swagger and Swagger Open API 2.0 Specification, a tool for generating A
 * The previous design caused the use to be too complicated. If no IP whitelist is configured, you need to enter a password to access the configuration item.
 
 [More Change Logs](/changelog.md)
-
-## Features
-
-- More friendly UI
-- More intuitive display
-- Support for `enum` display
-- Support for both public and private displays
-- Support for configuring IP access whitelist for private API documentation 
-- Support for privatization deployment
-
-![预览](./img.gif)
 
 ## Quick Start
 

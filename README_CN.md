@@ -1,6 +1,9 @@
 # Share API
 
-![version](https://img.shields.io/npm/v/@shuangren/share-api.svg)
+![node](https://img.shields.io/node/v/egg)
+![platform](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1)
+
+![version](https://img.shields.io/github/package-json/v/ShuangRen/share-api)
 ![license](https://img.shields.io/github/license/ShuangRen/share-api.svg)
 ![language](https://img.shields.io/github/languages/top/ShuangRen/share-api.svg)
 ![download](https://img.shields.io/npm/dw/@shuangren/share-api.svg)
@@ -10,22 +13,6 @@
 
 基于Swagger，Swagger open api 2.0 规范，通过配置Swagger JSON 生成API 文档。
 
-
-## 版本 1.1.0
-
-1. **支持二级路径**
-
-* 有些场合下需要使用 `www.example.com/scopePath` 来访问，而不是直接通过域名 `www.example.com` 访问
-* 现在`scopePath` 是一个可配置的项 
-
-2. **重写了setting 相关代码，表单验证全部由 antd 接管**
-
-3. **新增 `enablePrivate` 配置，默认关闭，开启后会启用私有接口和非私有接口的区分**
-
-* 通过开关开控制私有配置的开关，部分场景并不需要私有配置
-* 之前的设计导致使用过于复杂，在没有配置IP白名单的情况下，需要输入密码才能访问配置项
-
-[更多更新日志](/changelog_cn.md)
 
 ## 功能与特性
 
@@ -42,6 +29,22 @@
 支持私有化搭建
 
 ![预览](./img.gif)
+
+## 版本 1.1.0
+
+1. **支持二级路径**
+
+* 有些场合下需要使用 `www.example.com/scopePath` 来访问，而不是直接通过域名 `www.example.com` 访问
+* 现在`scopePath` 是一个可配置的项 
+
+2. **重写了setting 相关代码，表单验证全部由 antd 接管**
+
+3. **新增 `enablePrivate` 配置，默认关闭，开启后会启用私有接口和非私有接口的区分**
+
+* 通过开关开控制私有配置的开关，部分场景并不需要私有配置
+* 之前的设计导致使用过于复杂，在没有配置IP白名单的情况下，需要输入密码才能访问配置项
+
+[更多更新日志](/changelog_cn.md)
 
 ## 快速开始
 
