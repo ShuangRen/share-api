@@ -29,7 +29,7 @@ export default () => {
   router.post('/api/update', Update)
   router.post('/api/getapi', GetApi)
 
-  router.get('/static/*', async (ctx: Koa.ParameterizedContext<any>, next: NextFunction) => {
+  router.get('/shareapi-static/*', async (ctx: Koa.ParameterizedContext<any>, next: NextFunction) => {
     await send(ctx, ctx.path, { root: `${__dirname}/../build/` });
   })
 

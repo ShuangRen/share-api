@@ -4,9 +4,9 @@
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 
-if (process.env.REACT_APP_SERVER_ENV === 'PUB') {
-  process.env.PUBLIC_URL = './';
-}
+// if (process.env.REACT_APP_SERVER_ENV === 'PUB') {
+//   process.env.PUBLIC_URL = '/shareapi/';
+// }
 
 
 // Makes the script crash on unhandled rejections instead of silently

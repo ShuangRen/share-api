@@ -38,7 +38,7 @@ if (env.stringified['process.env'].NODE_ENV !== '"production"') {
 }
 
 // Note: defined here because it will be used more than once.
-const cssFilename = 'static/css/[name].[contenthash:8].css';
+const cssFilename = 'shareapi-static/css/[name].[contenthash:8].css';
 
 // ExtractTextPlugin expects the build output to be flat.
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
@@ -46,7 +46,7 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // To have this structure working with relative paths, we have to use custom options.
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ? // Making sure that the publicPath goes back to to build folder.
-    { publicPath: Array(cssFilename.split('/').length).join('../') }
+  { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
 
 // This is the production configuration.
@@ -66,8 +66,8 @@ module.exports = {
     // Generated JS file names (with nested folders).
     // There will be one main bundle, and one file per asynchronous chunk.
     // We don't currently advertise code splitting but Webpack supports it.
-    filename: 'static/js/[name].[chunkhash:8].js',
-    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+    filename: 'shareapi-static/js/[name].[chunkhash:8].js',
+    chunkFilename: 'shareapi-static/js/[name].[chunkhash:8].chunk.js',
     // We inferred the "public path" (such as / or /my-project) from homepage.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
@@ -104,7 +104,7 @@ module.exports = {
       '.jsx',
     ],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -143,7 +143,7 @@ module.exports = {
             loader: require.resolve('url-loader'),
             options: {
               limit: 10000,
-              name: 'static/media/[name].[hash:8].[ext]',
+              name: 'shareapi-static/media/[name].[hash:8].[ext]',
             },
           },
           {
@@ -151,7 +151,7 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
-              
+
               compact: true,
             },
           },
@@ -167,11 +167,11 @@ module.exports = {
                   transpileOnly: true,
                   configFile: paths.appTsProdConfig,
                   getCustomTransformers: () => ({
-                    before: [ tsImportPluginFactory({
+                    before: [tsImportPluginFactory({
                       libraryDirectory: 'es',
                       libraryName: 'antd',
                       style: 'css',
-                    }) ]
+                    })]
                   })
                 },
               },
@@ -223,7 +223,7 @@ module.exports = {
                               'last 4 versions',
                               'Firefox ESR',
                               'not ie < 9', // React doesn't support IE8 anyway
-                              'Chrome >= 35', 
+                              'Chrome >= 35',
                               'Safari >= 7.1',
                               'Firefox >= 31',
                               'Opera >= 12'
@@ -235,7 +235,7 @@ module.exports = {
                     },
                     {
                       loader: require.resolve('less-loader') // compiles Less to CSS
-                    }      
+                    }
                   ],
                 },
                 extractTextPluginOptions
@@ -268,7 +268,7 @@ module.exports = {
                         'last 4 versions',
                         'Firefox ESR',
                         'not ie < 9', // React doesn't support IE8 anyway 
-                        'Chrome >= 35', 
+                        'Chrome >= 35',
                         'Safari >= 7.1',
                         'Firefox >= 31',
                         'Opera >= 12'
@@ -292,7 +292,7 @@ module.exports = {
             // by webpacks internal loaders.
             exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
             options: {
-              name: 'static/media/[name].[hash:8].[ext]',
+              name: 'shareapi-static/media/[name].[hash:8].[ext]',
             },
           },
           // ** STOP ** Are you adding a new loader?

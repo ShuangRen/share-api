@@ -59,7 +59,7 @@ exports.default = (function () {
     router.get('/api/list', list_1.default);
     router.post('/api/update', update_1.default);
     router.post('/api/getapi', getapi_1.default);
-    router.get('/static/*', function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
+    router.get('/shareapi-static/*', function (ctx, next) { return __awaiter(_this, void 0, void 0, function () {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, send(ctx, ctx.path, { root: __dirname + "/../build/" })];

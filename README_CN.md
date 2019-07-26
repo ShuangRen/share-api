@@ -124,7 +124,7 @@ doc.start();
 
 `ipList` 运行直接内部访问的ip 列表，默认 `[]`
 
-`scopePath` 启用后，使用 `www.example.com/scopePath` 访问,  默认 `空字符串` 
+`scopePath` 启用后，使用 `www.example.com/scopePath` 访问,  默认 `空字符串`,  需要开启 `proxy-pass` 反代`shareapi-static` 到 node 服务地址。
 
 `enablePrivate` 开启私有配置功能, 默认 `false`
 

@@ -108,7 +108,11 @@ class Common implements ICommonStore {
     this.getSwaggerDatas();
 
     // 从 url 里面 获取 当前 center  并从 配置种 读取  center 的 config
-    const center = location.href.split('/')[3];
+    let num = 3;
+    if (window['scopePath']) {
+      num = 4;
+    }
+    const center = location.href.split('/')[num];
     console.log(center);
     if (center) {
       this.currentCenterConfig = this.swaggerApiConfig.filter((v: any) => v.name === center)[0];

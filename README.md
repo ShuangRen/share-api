@@ -123,7 +123,7 @@ Directly modify the configuration in the file `dist/server/config`
 
 `ipList` An IP list that runs direct internal access, Default is `[]`
 
-`scopePath` After enabling, Access using  `www.example.com/scopePath`,  Default is `empty string` 
+`scopePath` After enabling, Access using  `www.example.com/scopePath`,  Default is `empty string`, showed `proxy-pass`, `shareapi-static` to node server
 
 `enablePrivate` enable private config, Default is `false`
 

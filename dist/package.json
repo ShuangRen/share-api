@@ -1,6 +1,6 @@
 {
   "name": "@shuangren/share-api",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "main": "server/index.js",
   "description": "api api-documentation swagger swagger-ui swagger-api openapi api-docs api-documentation-tool api-doc api-docs-generato",
   "repository": {
