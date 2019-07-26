@@ -348,6 +348,9 @@ module.exports = {
           // Pending further investigation:
           // https://github.com/mishoo/UglifyJS2/issues/2011
           comparisons: false,
+          warnings: false,
+          drop_console: true,
+          drop_debugger: true
         },
         mangle: {
           safari10: true,

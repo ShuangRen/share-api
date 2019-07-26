@@ -119,7 +119,11 @@ class Common implements ICommonStore {
     } else {
       this.currentCenterConfig = this.swaggerApiConfig[0];
       if (this.currentCenterConfig) {
-        history.replaceState(null, 'firstapi', `${window['scopePath'] ? '/' + window['scopePath'] : ''}/${this.currentCenterConfig.name}`);
+        try {
+          history.replaceState(null, 'firstapi', `${window['scopePath'] ? '/' + window['scopePath'] : ''}/${this.currentCenterConfig.name}`);
+        } catch (e) {
+          return true;
+        }
       }
     }
 
