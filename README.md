@@ -5,7 +5,7 @@
 ![version](https://img.shields.io/github/package-json/v/ShuangRen/share-api)
 ![license](https://img.shields.io/github/license/ShuangRen/share-api.svg)
 ![language](https://img.shields.io/github/languages/top/ShuangRen/share-api.svg)
-![download](https://img.shields.io/npm/dw/@shuangren/share-api.svg)
+![download](https://img.shields.io/npm/dm/@shuangren/share-api.svg)
 ![pr](https://img.shields.io/github/issues-pr-closed/ShuangRen/share-api.svg)
 
 [查看中文README](/README_CN.md)
