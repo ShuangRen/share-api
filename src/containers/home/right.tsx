@@ -136,7 +136,7 @@ export default class RightCode extends React.Component<any> {
   }
 
   public renderResult = (model: any, num: number, returnArray?: boolean) => {
-    if (num > 6) {
+    if (num > 10) {
       return '递归过多的内容不展示';
     }
     const result = {};
