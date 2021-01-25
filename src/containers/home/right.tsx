@@ -95,27 +95,30 @@ export default class RightCode extends React.Component<any> {
     // let result: any = null;;
     if (model.type === 'object') {
       // 如果有code data 和 resultMessage
-      if (model.properties && model.properties.code && model.properties.data && model.properties.resultMessage) {
-        const data = model.properties.data;
-        // 如果data 有 type 并且是个boolean
-        if (data.type === false || data.type === true) {
-          return this.formatType(data, returnArray);
-        }
-        // 如果data有 $ref 属性
-        if (data['$ref']) {
-          return this.renderResponse(data['$ref'], num);
-        }
-        // 如果data 有 type  和 items 属性
-        if (data.type && data.type === 'array') {
-          return this.renderDataTypeArray(data.items, num, returnArray);
-        }
+      // if (model.properties) {
+      //   for(const item in model.properties) {
+      //     console.log(item)
+      //   }
+      //   const data = model.properties.data;
+      //   // 如果data 有 type 并且是个boolean
+      //   if (data.type === false || data.type === true) {
+      //     return this.formatType(data, returnArray);
+      //   }
+      //   // 如果data有 $ref 属性
+      //   if (data['$ref']) {
+      //     return this.renderResponse(data['$ref'], num);
+      //   }
+      //   // 如果data 有 type  和 items 属性
+      //   if (data.type && data.type === 'array') {
+      //     return this.renderDataTypeArray(data.items, num, returnArray);
+      //   }
 
-        if (data.type) {
-          return this.formatType(data, returnArray);
-        }
+      //   if (data.type) {
+      //     return this.formatType(data, returnArray);
+      //   }
 
-        return this.renderResult(model, num, returnArray);
-      }
+      //   return this.renderResult(model, num, returnArray);
+      // }
 
       return this.renderResult(model, num, returnArray);
     }
@@ -231,11 +234,12 @@ export default class RightCode extends React.Component<any> {
     // 模型名称
     const modelName = this.getDefinitions(item.value);
 
-    const result = {
-      code: 200,
-      data: item.isArray ? [this.renderResponse(item.value, 1)] : this.renderResponse(item.value, 1),
-      resultMessage: 'string'
-    };
+    // const result = {
+    //   code: 200,
+    //   data: item.isArray ? [this.renderResponse(item.value, 1)] : this.renderResponse(item.value, 1),
+    //   resultMessage: 'string'
+    // };
+    const result = this.renderResponse(item.value, 1)
     if (/PageListResponse/.test(modelName)) {
       result['page'] = 0;
       result['pageSize'] = 0;

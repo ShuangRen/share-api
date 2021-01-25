@@ -2,7 +2,7 @@ import { Request } from 'utils'
 
 export const requestSwagger = <T>(item: any): Promise<T> => {
   const opts = {
-    url: '/api/getapi',
+    url: '/share-api/getapi',
     method: 'POST',
     notBasePath: true,
     params: {
@@ -14,7 +14,7 @@ export const requestSwagger = <T>(item: any): Promise<T> => {
 
 export const getSwaggerApiConfig = <T>(): Promise<T> => {
   const opts = {
-    url: '/api/list',
+    url: '/share-api/list',
     params: {
       password: sessionStorage.getItem('password') || ''
     },
@@ -25,7 +25,7 @@ export const getSwaggerApiConfig = <T>(): Promise<T> => {
 
 export const updateSwaggerApiConfig = <T>(params: any): Promise<T> => {
   const opts = {
-    url: '/api/update',
+    url: '/share-api/update',
     method: 'POST',
     params,
     notBasePath: true

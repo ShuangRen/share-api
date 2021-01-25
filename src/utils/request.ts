@@ -3,7 +3,7 @@ import { message } from 'antd';
 import createBrowserHistory from 'history/createBrowserHistory';
 import { IRequestRes, IOpts } from '@/utils/request.interface';
 // 代理名
-const proxyName: string = '/api';
+const proxyName: string = '/share-api';
 // 默认的参数
 const defaultopts = {
   timeout: 20000,
@@ -53,6 +53,7 @@ const Request = <T>(opts: IOpts, code?: number[]): Promise<T> => {
   if (!opts.notBasePath) {
     opts.url = proxyName + opts.url;
   }
+
   // 合并默认参数和业务参数
   opts.whitecode = code || null;
   opts = { ...defaultopts, ...opts };

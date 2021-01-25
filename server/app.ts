@@ -25,9 +25,9 @@ export default () => {
   App.use(router.allowedMethods());
 
 
-  router.get('/api/list', List)
-  router.post('/api/update', Update)
-  router.post('/api/getapi', GetApi)
+  router.get('/share-api/list', List)
+  router.post('/share-api/update', Update)
+  router.post('/share-api/getapi', GetApi)
 
   router.get('/shareapi-static/*', async (ctx: Koa.ParameterizedContext<any>, next: NextFunction) => {
     await send(ctx, ctx.path, { root: `${__dirname}/../build/` });
